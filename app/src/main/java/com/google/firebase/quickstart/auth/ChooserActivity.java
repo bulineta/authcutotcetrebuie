@@ -29,6 +29,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import com.google.firebase.analytics.FirebaseAnalytics;
 
+
 /**
  * Simple list-based Activity to redirect to one of the other Activities. This Activity does not
  * contain any useful code related to Firebase Authentication. You may want to start with
@@ -54,11 +55,12 @@ public class ChooserActivity extends AppCompatActivity implements AdapterView.On
             R.string.desc_emailpassword,
 
     };
-
+    private FirebaseAnalytics mFirebaseAnalytics;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chooser);
+
 
         // Set up ListView and Adapter
         ListView listView = (ListView) findViewById(R.id.list_view);

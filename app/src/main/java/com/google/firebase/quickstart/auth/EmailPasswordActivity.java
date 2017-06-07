@@ -34,7 +34,6 @@ import com.google.firebase.analytics.FirebaseAnalytics;
 
 public class EmailPasswordActivity extends BaseActivity implements
         View.OnClickListener {
-    private FirebaseAnalytics mFirebaseAnalytics;
 
     private static final String TAG = "EmailPassword";
 
@@ -59,8 +58,6 @@ public class EmailPasswordActivity extends BaseActivity implements
         mEmailField = (EditText) findViewById(R.id.field_email);
         mPasswordField = (EditText) findViewById(R.id.field_password);
 
-        // Obtain the FirebaseAnalytics instance.
-        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
 
         // Buttons
         findViewById(R.id.email_sign_in_button).setOnClickListener(this);
