@@ -34,17 +34,12 @@ import com.google.firebase.analytics.FirebaseAnalytics;
  * Simple list-based Activity to redirect to one of the other Activities. This Activity does not
  * contain any useful code related to Firebase Authentication. You may want to start with
  * one of the following Files:
- *     {@link GoogleSignInActivity}
- *     {@link FacebookLoginActivity}
- *     {@link TwitterLoginActivity}
  *     {@link EmailPasswordActivity}
  */
 public class ChooserActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
     private static final Class[] CLASSES = new Class[]{
-            GoogleSignInActivity.class,
-            FacebookLoginActivity.class,
-            TwitterLoginActivity.class,
+
             EmailPasswordActivity.class,
     };
 

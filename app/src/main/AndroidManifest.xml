@@ -18,18 +18,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".GoogleSignInActivity"
-            android:label="@string/label_google_sign_in" />
-        <activity
-            android:name=".FacebookLoginActivity"
-            android:label="@string/label_facebook_login" />
-        <activity
             android:name=".EmailPasswordActivity"
             android:label="@string/label_emailpassword"
             android:windowSoftInputMode="stateAlwaysHidden" />
-        <activity
-            android:name=".TwitterLoginActivity"
-            android:label="@string/label_twitter_login" />
+        <activity android:name=".ForgotPassword"></activity>
     </application>
 
 </manifest>
