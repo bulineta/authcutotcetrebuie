@@ -16,11 +16,14 @@
 
 package com.google.firebase.quickstart.auth;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -41,6 +44,7 @@ public class EmailPasswordActivity extends BaseActivity implements
     private TextView mDetailTextView;
     private EditText mEmailField;
     private EditText mPasswordField;
+    private Button forgot_password;
 
     // [START declare_auth]
     private FirebaseAuth mAuth;
@@ -51,6 +55,7 @@ public class EmailPasswordActivity extends BaseActivity implements
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_emailpassword);
+
 
         // Views
         mStatusTextView = (TextView) findViewById(R.id.status);
@@ -64,6 +69,7 @@ public class EmailPasswordActivity extends BaseActivity implements
         findViewById(R.id.email_create_account_button).setOnClickListener(this);
         findViewById(R.id.sign_out_button).setOnClickListener(this);
         findViewById(R.id.forgot_password).setOnClickListener(this);
+        forgot_password = (Button) findViewById(R.id.forgot_password);
 
         // [START initialize_auth]
         mAuth = FirebaseAuth.getInstance();
@@ -196,6 +202,12 @@ public class EmailPasswordActivity extends BaseActivity implements
             findViewById(R.id.signed_in_buttons).setVisibility(View.GONE);
         }
     }
+
+    public void forgotPass(View view) {
+        Intent intent = new Intent(EmailPasswordActivity.this, ForgotPassword.class);
+        startActivity(intent);
+    }
+
 
     @Override
     public void onClick(View v) {

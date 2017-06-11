@@ -23,6 +23,8 @@ public class ForgotPassword extends BaseActivity implements View.OnClickListener
     private Button forgot_btn_reset, btn_back;
     private FirebaseAuth auth;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,8 +71,6 @@ public class ForgotPassword extends BaseActivity implements View.OnClickListener
                                 }
                                 hideProgressDialog();
                             }
-
-                            // [END_EXCLUDE]
                         });
             }
 
