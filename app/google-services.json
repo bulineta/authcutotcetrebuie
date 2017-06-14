@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "34421169486",
-    "firebase_url": "https://auth-71a55.firebaseio.com",
-    "project_id": "auth-71a55",
-    "storage_bucket": "auth-71a55.appspot.com"
+    "project_number": "89464399957",
+    "firebase_url": "https://authcutotcetrebuie.firebaseio.com",
+    "project_id": "authcutotcetrebuie",
+    "storage_bucket": "authcutotcetrebuie.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:34421169486:android:87fcb66cc6ca320a",
+        "mobilesdk_app_id": "1:89464399957:android:87fcb66cc6ca320a",
         "android_client_info": {
           "package_name": "com.google.firebase.quickstart.auth"
         }
       },
       "oauth_client": [
         {
-          "client_id": "34421169486-fv87c12mrr8f387i2cami7s8cn4rr9jj.apps.googleusercontent.com",
+          "client_id": "89464399957-8jf00i5121k241lifqolhcib7fkjhakg.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.google.firebase.quickstart.auth",
@@ -23,13 +23,13 @@
           }
         },
         {
-          "client_id": "34421169486-4gh325u7g3mck5b7n55ik440la27pla7.apps.googleusercontent.com",
+          "client_id": "89464399957-6uvkmf6d51h3d0qo89g5ilpiq6bi3kdc.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDb376MSGIeYdtyYWFCsBOpeuIeQUgHEzw"
+          "current_key": "AIzaSyBoa4PsBhEOknFW2SMBACchRb2XECAoHMs"
         }
       ],
       "services": {
@@ -40,7 +40,7 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "34421169486-4gh325u7g3mck5b7n55ik440la27pla7.apps.googleusercontent.com",
+              "client_id": "89464399957-6uvkmf6d51h3d0qo89g5ilpiq6bi3kdc.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

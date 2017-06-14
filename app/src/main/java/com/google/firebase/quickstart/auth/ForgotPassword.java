@@ -82,4 +82,9 @@ public class ForgotPassword extends BaseActivity implements View.OnClickListener
     public void onClick(View v) {
 
     }
+
+    @Override
+    public void goToAnActivity(View view) {
+
+    }
 }

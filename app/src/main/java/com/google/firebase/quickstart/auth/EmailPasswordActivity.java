@@ -57,11 +57,13 @@ public class EmailPasswordActivity extends BaseActivity implements
         setContentView(R.layout.activity_emailpassword);
 
 
+
         // Views
         mStatusTextView = (TextView) findViewById(R.id.status);
         mDetailTextView = (TextView) findViewById(R.id.detail);
         mEmailField = (EditText) findViewById(R.id.field_email);
         mPasswordField = (EditText) findViewById(R.id.field_password);
+
 
 
         // Buttons
@@ -72,8 +74,13 @@ public class EmailPasswordActivity extends BaseActivity implements
         forgot_password = (Button) findViewById(R.id.forgot_password);
 
         // [START initialize_auth]
-        mAuth = FirebaseAuth.getInstance();
+        mAuth = FirebaseAuth.getInstance();}
         // [END initialize_auth]
+        @Override
+    public void goToAnActivity(View view) {
+        Intent Intent = new Intent(this, ForgotPassword.class);
+        startActivity(Intent);
+
     }
 
     // [START on_start_check_user]
@@ -85,6 +92,7 @@ public class EmailPasswordActivity extends BaseActivity implements
         updateUI(currentUser);
     }
     // [END on_start_check_user]
+
 
     private void createAccount(String email, String password) {
         Log.d(TAG, "createAccount:" + email);
@@ -203,12 +211,6 @@ public class EmailPasswordActivity extends BaseActivity implements
         }
     }
 
-    public void forgotPass(View view) {
-        Intent intent = new Intent(EmailPasswordActivity.this, ForgotPassword.class);
-        startActivity(intent);
-    }
-
-
     @Override
     public void onClick(View v) {
         int i = v.getId();
@@ -218,6 +220,10 @@ public class EmailPasswordActivity extends BaseActivity implements
             signIn(mEmailField.getText().toString(), mPasswordField.getText().toString());
         } else if (i == R.id.sign_out_button) {
             signOut();
+        } else if (i == R.id.forgot_password) {
+            Intent Intent = new Intent(v.getContext(), ForgotPassword.class);
+            v.getContext().startActivity(Intent);}
         }
+
     }
-}
+
