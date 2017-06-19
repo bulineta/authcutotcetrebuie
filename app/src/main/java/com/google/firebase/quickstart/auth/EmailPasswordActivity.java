@@ -145,7 +145,7 @@ public class EmailPasswordActivity extends BaseActivity implements
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "signInWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
-                            updateUI(user);
+
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithEmail:failure", task.getException());
@@ -159,6 +159,8 @@ public class EmailPasswordActivity extends BaseActivity implements
                             mStatusTextView.setText(R.string.auth_failed);
                         }
                         hideProgressDialog();
+
+
                         // [END_EXCLUDE]
                     }
                 });
@@ -195,11 +197,8 @@ public class EmailPasswordActivity extends BaseActivity implements
     private void updateUI(FirebaseUser user) {
         hideProgressDialog();
         if (user != null) {
-            mDetailTextView.setText(getString(R.string.firebase_status_fmt, user.getUid()));
-
-            findViewById(R.id.email_password_buttons).setVisibility(View.GONE);
-            findViewById(R.id.email_password_fields).setVisibility(View.GONE);
-            findViewById(R.id.signed_in_buttons).setVisibility(View.VISIBLE);
+            Intent intent = new Intent(this, AppMenu.class);
+            startActivity(intent);
 
         } else {
             mStatusTextView.setText(R.string.signed_out);

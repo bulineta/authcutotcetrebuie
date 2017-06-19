@@ -22,6 +22,9 @@
             android:label="@string/label_emailpassword"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity android:name=".ForgotPassword" />
+        <activity
+            android:name=".AppMenu"
+            android:label="@string/title_activity_app_menu"></activity>
     </application>
 
 </manifest>
